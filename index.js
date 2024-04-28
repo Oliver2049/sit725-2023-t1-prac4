@@ -1,9 +1,10 @@
 var express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 var app = express();
+let collection;
 const uri =
   "mongodb+srv://Oliverhatesyou2049:uB3eQvI3Q5nr8Mom@atlascluster.iodctpd.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster";
-let collection;
+
 app.use(express.static(__dirname + "/public_html"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
